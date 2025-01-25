@@ -1,0 +1,30 @@
+:root {
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --line-height: 1.5;
+
+  --color: rgba(255, 255, 255, 0.87);
+  --background-color: #242424;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(2%);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

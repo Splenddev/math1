@@ -1,0 +1,41 @@
+.toast {
+  position: fixed;
+  width: 270px;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 0.1fr;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(2%);
+  animation: fadeIn 0.5s forwards, fadeOut 0.5s forwards 2.5s;
+  z-index: 1000;
+}
+
+.toast.success {
+  background-color: #4caf50;
+}
+
+.toast.error {
+  background-color: #f44336;
+}
+
+.toast.info {
+  background-color: #2196f3;
+}
+.toast-message-progress {
+  padding: 20px 0px;
+  padding-left: 20px;
+  position: relative;
+}
+.toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #fff;
+  border-radius: 2px;
+}

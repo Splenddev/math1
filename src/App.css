@@ -1,0 +1,138 @@
+.input-container {
+  margin-top: 10px;
+  display: grid;
+  gap: 7px;
+  grid-template-columns: 90px 90px 90px 90px 90px;
+  grid-template-rows: 70px 70px 70px;
+}
+button.pref-btn {
+  padding: 10px;
+  margin-right: 10px;
+}
+.calculator {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.calculate-btn {
+  width: 187px;
+}
+.app {
+  position: relative;
+  overflow: hidden;
+  /* padding: 20px; */
+}
+.overlay {
+  right: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px #cecece;
+  background: #ffffff;
+  top: 20px;
+  width: 270px;
+  overflow: hidden;
+  position: absolute;
+}
+@keyframes introFromRight {
+  10% {
+    right: -100%;
+  }
+  100% {
+    right: 20px;
+  }
+}
+@keyframes outroFromRight {
+  10% {
+    right: 20px;
+  }
+  100% {
+    right: -100%;
+  }
+}
+.overlay.show {
+  /* opacity: 1; */
+  right: 20px;
+  /* transform: scale(1); */
+  animation: introFromRight 1s ease;
+}
+@keyframes loader {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.overlay-top p {
+  font-size: 13px;
+}
+.overlay.hide {
+  animation: outroFromRight 2s linear;
+  right: -100%;
+}
+.overlay .loading {
+  height: 4px;
+  position: relative;
+  width: 100%;
+  background: #f3f3f3;
+}
+.loading::before {
+  animation: loader 2.65s linear;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #3498db;
+}
+.overlay-top {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 0.1fr;
+  align-items: center;
+}
+.overlay-top .icon {
+  cursor: pointer;
+  height: 15px;
+  padding: 2px;
+  border-radius: 12px;
+  width: 15px;
+  transition: ease 0.3s;
+}
+.overlay-top .icon:hover {
+  background: #676767;
+}
+.app {
+  position: relative;
+}
+
+.calculator span {
+  transition: 0.3s ease;
+  margin-top: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+.input-display {
+  display: flex;
+  gap: 3px;
+}
+.input-display .tabs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.input-display .tabs p,
+.equals {
+  width: 50px;
+  height: 50px;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #cecece;
+  text-align: center;
+}
+span.active {
+  color: #ff0707;
+}

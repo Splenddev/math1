@@ -1,0 +1,124 @@
+.equation-preference {
+  display: flex;
+  flex-direction: column;
+}
+input[type='checkbox'] {
+  place-self: center;
+}
+.inputs input {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.card-close {
+  place-self: end;
+}
+.card-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.card-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.card-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.card-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.card {
+  background: #dedede;
+  color: #4a4a4a;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.calculate__clear-btn {
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.calculate__clear-btn button {
+  padding: 8px 10px;
+}
+.card-indicator {
+  position: absolute;
+  top: 27px;
+  right: 20px;
+  border-radius: 20px;
+  height: 35px;
+  text-align: center;
+  place-content: center;
+  width: 50px;
+  /* padding: 5px 10px; */
+  color: #fff;
+  background: red;
+}
+.card-right,
+.card-left,
+.middle-bottom,
+.card-top {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+}
+/* .card-left {
+  background: #fff;
+} */
+.card-middle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.card-top {
+  margin: 10px 0;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.05fr 1fr;
+}
+
+p.all-values {
+  color: #ff2b0f;
+}
+.middle-bottom {
+  margin: 10px 0;
+}
+.method {
+  text-align: center;
+}
+.middle-bottom-last {
+  display: grid;
+  grid-template-columns: 1fr 0.1fr;
+}
+.close {
+  cursor: pointer;
+  /* place-self: end; */
+}
+.option {
+  display: flex;
+  margin-top: 20px;
+  height: 40px;
+  gap: 10px;
+}
+.option button {
+  width: 120px;
+}
+.text-input input {
+  width: 100%;
+  margin: 10px 0;
+}
+@media (max-width: 750px) {
+  .card-middle {
+    display: flex;
+    flex-direction: column;
+  }
+}
